@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey - Nidhaam</title>
+  <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="brand">Nidhaam</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="survey.html">Survey</a></li>
+      </ul>
+      <button onclick="toggleTheme()" class="theme-toggle">Toggle Theme</button>
+    </nav>
+  </header>
+
+  <main class="survey-section">
+    <h2>Quick Survey</h2>
+    <form id="surveyForm" onsubmit="return validateSurveyForm()" novalidate>
+      <fieldset>
+        <legend>How did you find this portfolio?</legend>
+        <label><input type="radio" name="find" value="search" required /> Search Engine</label>
+        <label><input type="radio" name="find" value="social" /> Social Media</label>
+        <label><input type="radio" name="find" value="friend" /> Friend</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Which topics interest you? (Select all that apply)</legend>
+        <label><input type="checkbox" name="topics" value="networking" /> Networking</label>
+        <label><input type="checkbox" name="topics" value="security" /> Security</label>
+        <label><input type="checkbox" name="topics" value="webdev" /> Web Development</label>
+        <label><input type="checkbox" name="topics" value="projects" /> Projects</label>
+      </fieldset>
+
+      <label for="comments">Additional Comments:</label>
+      <textarea id="comments" name="comments" rows="4" placeholder="Your feedback here..."></textarea>
+
+      <button type="submit">Submit Survey</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-social">
+      <a href="https://whatsapp.com/yourprofile" target="_blank" title="Whatsap"><img src="whatsapp.svg" alt="Facebook" /></a>
+      <a href="https://instagram.com/yourprofile" target="_blank" title="GitHub"><img src="insta.svg" alt="Instagram" /></a>
+      <a href="https://twitter.com/yourprofile" target="_blank" title="Twitter"><img src="x.svg" alt="Twitter" /></a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn"><img src="likedin.svg" alt="LinkedIn" /></a>
+      <a href="https://facebook.com/yourprofile" target="_blank" title="Facebook"><img src="facebook.svg" alt="Facebook" /></a>
+    </div>
+    <div class="footer-contact">
+      <p>Email: <a href="mailto:nidhaam07@gmail.com">nidhaam07@gmail.com</a> | Phone: <a href="tel:+255612006008">+255 612 006 008</a></p>
+    </div>
+    <div class="footer-motto">
+      <em>Mteja kwetu ni mwanafamilia</em>
+    </div>
+    <div class="footer-copy">
+      <p>&copy; 2025 Nidhaam. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

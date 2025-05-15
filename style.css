@@ -1,0 +1,337 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f9ff;
+  color: #222;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+a {
+  text-decoration: none;
+  color: #1e90ff;
+}
+a:hover {
+  text-decoration: underline;
+}
+header {
+  background: #0f4c81;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'Pacifico', cursive;
+  letter-spacing: 2px;
+  color: #dbe9ff;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links li a {
+  font-weight: 600;
+  color: #dbe9ff;
+}
+.nav-links li a:hover,
+.nav-links li a:focus {
+  color: #ffb703;
+  outline: none;
+}
+.theme-toggle {
+  background: #ffb703;
+  border: 2px solid #ffa500;
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #0f4c81;
+  font-weight: 700;
+  transition: background 0.3s ease;
+}
+.theme-toggle:hover, .theme-toggle:hover.dark-theme{
+    background: #0f4c81;
+    border: 2px solid #ffa500;
+    color: #ffa500;
+}
+
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.hero-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.highlight {
+  color: #ffb703;
+}
+
+/* Buttons */
+.btn, .cta-button {
+  display: inline-block;
+  background: #ffb703;
+  color: #0f4c81;
+  padding: 0.8rem 1.6rem;
+  font-weight: 700;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgb(255 183 3 / 0.4);
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+.btn:hover, .cta-button:hover {
+  background: #ffa500;
+}
+
+/* About Page 2-column layout */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 2rem auto;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+.about-left {
+  flex: 1 1 40%;
+  min-width: 280px;
+}
+.about-left img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 0.15);
+}
+.about-right {
+  flex: 1 1 55%;
+  min-width: 280px;
+}
+.about-right h2 {
+  margin-bottom: 1rem;
+  color: #0077b6;
+}
+.about-right h3 {
+  margin-top: 2rem;
+  color: #0077b6;
+}
+.about-right ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+.about-right ul ul {
+  list-style-type: circle;
+  margin-left: 1.5rem;
+}
+
+/* Projects Page 3-column layout */
+.projects-section {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.projects-section h2 {
+  text-align: center;
+  color: #0077b6;
+  margin-bottom: 1.5rem;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+}
+.project-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgb(0 0 0 / 0.15);
+}
+.project-card h3 {
+  margin-bottom: 0.5rem;
+  color: #0077b6;
+}
+.project-card button {
+  margin-top: 1rem;
+  padding: 0.4rem 0.8rem;
+  background: #ffb703;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.project-card button:hover {
+  background: #ffa500;
+}
+.details {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+.hidden {
+  display: none;
+}
+
+/* Contact and Survey Forms */
+.contact-section, .survey-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+h2 {
+  color: #0077b6;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+form label {
+  display: block;
+  margin: 0.7rem 0 0.3rem;
+  font-weight: 600;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1.8px solid #0077b6;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form textarea:focus {
+  border-color: #ffb703;
+  outline: none;
+}
+form button {
+  margin-top: 1.5rem;
+  width: 100%;
+  background: #ffb703;
+  border: none;
+  padding: 0.8rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+form button:hover,
+form button:focus {
+  background: #ffa500;
+  outline: none;
+}
+span {
+  color: red;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+  }
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+body.dark-theme {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+
+/* ...existing code... */
+.site-footer {
+  background: #222;
+  color: #eee;
+  padding: 30px 0 10px 0;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 40px;
+}
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.footer-social a {
+  margin: 0 10px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.7s ease;
+}
+.footer-social img {
+  width: 28px;
+  height: 28px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+.footer-social img:hover {
+  filter: grayscale(0%);
+}
+.footer-contact {
+  margin: 10px 0;
+}
+.footer-contact a {
+  color: #ffd700;
+  text-decoration: none;
+}
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+.footer-motto {
+  margin: 10px 0;
+  font-style: italic;
+  color: #ffd700;
+  font-size: 1.1em;
+}
+.footer-copy {
+  margin-top: 10px;
+  font-size: 0.95em;
+  color: #aaa;
+}
+/* ...existing code... */
+
+.footer-social > a:hover{
+    transform: rotate(360deg) scale(1.02);
+
+}
+
+.project-p {
+    color: #222;
+}

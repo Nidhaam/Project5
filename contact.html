@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me - Nidhaam</title>
+  <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="brand">Nidhaam</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="survey.html">Survey</a></li>
+      </ul>
+      <button onclick="toggleTheme()" class="theme-toggle">Dark Theme</button>
+    </nav>
+  </header>
+
+  <main class="contact-section">
+    <h2>Contact Me</h2>
+    <form id="contactForm" onsubmit="return validateContactForm()" novalidate>
+      <label for="name">Name <span>*</span></label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email <span>*</span></label>
+      <input type="email" id="email" name="email" placeholder="nidhaam07@gmail.com" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+255 612 006 008" />
+
+      <label for="message">Message <span>*</span></label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+    <div class="map-container">
+  <h3>My Location</h3>
+  <iframe
+    src="https://www.google.com/maps?q=Iyumbu+Dodoma&output=embed"
+    width="100%"
+    height="300"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-social">
+      <a href="https://whatsapp.com/yourprofile" target="_blank" title="Whatsap"><img src="whatsapp.svg" alt="Facebook" /></a>
+      <a href="https://instagram.com/yourprofile" target="_blank" title="GitHub"><img src="insta.svg" alt="Instagram" /></a>
+      <a href="https://twitter.com/yourprofile" target="_blank" title="Twitter"><img src="x.svg" alt="Twitter" /></a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn"><img src="likedin.svg" alt="LinkedIn" /></a>
+      <a href="https://facebook.com/yourprofile" target="_blank" title="Facebook"><img src="facebook.svg" alt="Facebook" /></a>
+    </div>
+    <div class="footer-contact">
+      <p>Email: <a href="mailto:nidhaam07@gmail.com">nidhaam07@gmail.com</a> | Phone: <a href="tel:+255612006008">+255 612 006 008</a></p>
+    </div>
+    <div class="footer-motto">
+      <em>Mteja kwetu ni mwanafamilia</em>
+    </div>
+    <div class="footer-copy">
+      <p>&copy; 2025 Nidhaam. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
